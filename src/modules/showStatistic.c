@@ -25,14 +25,16 @@ int main() {
 
 void showStatistic(struct Student S[], int n) {
     int i;
-    float total = 0;
+    float total = 0, avg;
 
     printf("\n===== Show MANU =====\n");
     for (i = 0; i < n; i++) {
         printf("%d  %-10s  %.1f\n", S[i].id, S[i].name, S[i].score);
         total += S[i].score; 
     }
+    avg = total /n;
 
     printf("=========================\n");
-    printf("Total Score of Class: %.1f\n", total);
+    printf("Total Score : %.1f\n", total);
+    printf("Averagg Score : %.2f\n",avg);
 }
